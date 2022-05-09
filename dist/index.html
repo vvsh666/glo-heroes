@@ -5,12 +5,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
     <title>Document</title>
 </head>
 
 <body>
+
+    <header>
+        <div class="container">
+            <div class="logo-wrapper">
+                <div class="logo">
+                    <img src="./img/marvel.png" alt="logo" class="logo-img">
+                </div>
+                <div class="search">
+                    <input type="text" class="search-input">
+                    <button class="search-btn"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <main>
+
+        <section class="filter-section">
+            <div class="container">
+                <div class="select-wrapper">
+                    <div class="select-block">
+                        <label for="species" class="select-label">Species</label>
+                        <select class="select-input" name="species" id="species">
+                            <option value="">Не выбран</option>
+                        </select>
+                    </div>
+                    <div class="select-block">
+                        <label for="species" class="select-label">Gender</label>
+                        <select class="select-input" name="species" id="species">
+                            <option value="">Не выбран</option>
+                        </select>
+                    </div>
+                    <div class="select-block">
+                        <label for="species" class="select-label">Status</label>
+                        <select class="select-input" name="species" id="species">
+                            <option value="">Не выбран</option>
+                        </select>
+                    </div>
+                    <div class="select-block">
+                        <label for="species" class="select-label">Citizenship</label>
+                        <select class="select-input" name="species" id="species">
+                            <option value="">Не выбран</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info">
+            <div class="container">
+                <div class="info-wrapper">
+
+                    <div class="movies-list">
+                        <ul>
+                            <li>Film nomber 1</li>
+                            <li>Film nomber 1</li>
+                            <li>Film nomber 1</li>
+                            <li>Film nomber 1</li>
+                            <li>Film nomber 1</li>
+                            <li>Film nomber 1</li>
+                            <li>Film nomber 1</li>
+                            <li>Film nomber 1</li>
+                            <li>Film nomber 1</li>
+                            <li>Film nomber 1</li>
+                        </ul>
+                    </div>
+
+                    <div class="hero-wrapper">
+                        <div class="hero-block">
+                            <div class="hero-image">
+                                <img src="./dbimage/97d1d9f934a350cee765c5ac1a466605.jpg" alt="hero" class="hero-img">
+                            </div>
+                            <div class="hero-info">
+                                <div class="hero-info-item">
+                                    <div>name</div>
+                                    <div>Thanos</div>
+                                </div>
+                                <div class="hero-info-item">
+                                    <div>realName</div>
+                                    <div>Thanos</div>
+                                </div>
+                                <div class="hero-info-item">
+                                    <div>species</div>
+                                    <div>Titan</div>
+                                </div>
+                                <div class="hero-info-item">
+                                    <div>birthDay</div>
+                                    <div>1013</div>
+                                </div>
+                                <div class="hero-info-item">
+                                    <div>deathDay</div>
+                                    <div>2018</div>
+                                </div>
+                                <div class="hero-info-item">
+                                    <div>status</div>
+                                    <div>deceased</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
     </main>
 

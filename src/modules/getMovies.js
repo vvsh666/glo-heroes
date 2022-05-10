@@ -7,7 +7,7 @@ import { showMovies } from "./showMovies"
 export const getMovies = () => {
     let moviesList = []
 
-    return getData().then(data => {
+    getData().then(data => {
         data.forEach(item => {
             if (item.movies) {
                 moviesList = [...moviesList, ...item.movies]

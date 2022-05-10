@@ -62,12 +62,14 @@ header {
 
 .filter-section {
     padding: 20px 0;
+    background: #979997;
 }
 
 .select-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .select-block {
@@ -93,14 +95,88 @@ header {
     display: flex;
     align-items: start;
     justify-content: space-between;
-    width: 60%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.movies-list {
+    width: 30%;
+    padding: 10px;
+    max-height: 500px;
+    overflow: overlay;
+
+}
+
+.movies-list>ul {
+    list-style-type: none;
+}
+
+.list-movies-item {
+    padding: 3px 10px;
+}
+
+.list-movies-item:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #b3b3b3;
+}
+
+.list-movies-item-active {
+    color: white;
+    background-color: #979997;
+}
+
+.hero-wrapper {
+    width: 70%;
+}
+
+.title-hero {
+    display: block;
+    width: 100%;
+    align-items: center;
 }
 
 .hero-block {
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+.hero-slide {
     display: flex;
     align-items: start;
+    justify-content: space-between;
+
 }
 
 .hero-img {
+    object-fit: cover;
     max-width: 400px;
+    width: 100%;
+}
+
+.hero-info {
+    width: 40%;
+    padding: 0 10px;
+}
+
+.hero-info-item {
+    width: 100%;
+}
+
+.hero-info-item-title {
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.hero-info-item-text {
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    top: 90%;
 }

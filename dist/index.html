@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/main.js" defer></script>
     <title>Document</title>
@@ -65,44 +66,87 @@
 
                     <div class="movies-list">
                         <ul id="list-movies">
-                            <li>All films</li>
+                            <li class="list-movies-item list-movies-item-active">All films</li>
                         </ul>
                     </div>
 
-                    <div class="hero-wrapper">
-                        <div class="hero-block">
-                            <div class="hero-image">
-                                <img src="./dbimage/97d1d9f934a350cee765c5ac1a466605.jpg" alt="hero" class="hero-img">
-                            </div>
-                            <div class="hero-info">
-                                <div class="hero-info-item">
-                                    <div>name</div>
-                                    <div>Thanos</div>
-                                </div>
-                                <div class="hero-info-item">
-                                    <div>realName</div>
-                                    <div>Thanos</div>
-                                </div>
-                                <div class="hero-info-item">
-                                    <div>species</div>
-                                    <div>Titan</div>
-                                </div>
-                                <div class="hero-info-item">
-                                    <div>birthDay</div>
-                                    <div>1013</div>
-                                </div>
-                                <div class="hero-info-item">
-                                    <div>deathDay</div>
-                                    <div>2018</div>
-                                </div>
-                                <div class="hero-info-item">
-                                    <div>status</div>
-                                    <div>deceased</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="hero-wrapper swiper">
+                        <h2 class="title-hero">All films</h2>
+                        <div class="hero-block swiper-wrapper">
 
+                            <div class="hero-slide swiper-slide">
+                                <div class="hero-image">
+                                    <img src="./dbimage/97d1d9f934a350cee765c5ac1a466605.jpg" alt="hero"
+                                        class="hero-img">
+                                </div>
+                                <div class="hero-info">
+                                    <div class="hero-info-item">
+                                        <div class="hero-info-item-title">name</div>
+                                        <div class="hero-info-item-text">Thanos</div>
+                                    </div>
+                                    <div class="hero-info-item">
+                                        <div class="hero-info-item-title">realName</div>
+                                        <div class="hero-info-item-text">Thanos</div>
+                                    </div>
+                                    <div class="hero-info-item">
+                                        <div class="hero-info-item-title">species</div>
+                                        <div class="hero-info-item-text">Titan</div>
+                                    </div>
+                                    <div class="hero-info-item">
+                                        <div class="hero-info-item-title">birthDay</div>
+                                        <div class="hero-info-item-text">1013</div>
+                                    </div>
+                                    <div class="hero-info-item">
+                                        <div class="hero-info-item-title">deathDay</div>
+                                        <div class="hero-info-item-text">2018</div>
+                                    </div>
+                                    <div class="hero-info-item">
+                                        <div class="hero-info-item-title">status</div>
+                                        <div class="hero-info-item-text">deceased</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="hero-slide swiper-slide">
+                                <div class="hero-image">
+                                    <img src="./dbimage/97d1d9f934a350cee765c5ac1a466605.jpg" alt="hero"
+                                        class="hero-img">
+
+                                </div>
+                                <div class="hero-info">
+                                    <div class="hero-info-item">
+                                        <div class="hero-info-item-title">name</div>
+                                        <div class="hero-info-item-text">Thanos</div>
+                                    </div>
+                                    <div class="hero-info-item">
+                                        <div class="hero-info-item-title">realName</div>
+                                        <div class="hero-info-item-text">Thanos</div>
+                                    </div>
+                                    <div class="hero-info-item">
+                                        <div class="hero-info-item-title">species</div>
+                                        <div class="hero-info-item-text">Titan</div>
+                                    </div>
+                                    <div class="hero-info-item">
+                                        <div class="hero-info-item-title">birthDay</div>
+                                        <div class="hero-info-item-text">1013</div>
+                                    </div>
+                                    <div class="hero-info-item">
+                                        <div class="hero-info-item-title">deathDay</div>
+                                        <div class="hero-info-item-text">2018</div>
+                                    </div>
+                                    <div class="hero-info-item">
+                                        <div class="hero-info-item-title">status</div>
+                                        <div class="hero-info-item-text">deceased</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
             </div>
         </section>

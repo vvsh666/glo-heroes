@@ -1,9 +1,12 @@
 export const showMovies = (text) => {
     const list = document.getElementById('list-movies')
 
-    let li = document.createElement('li')
+    if (text) {
+        let li = document.createElement('li')
 
-    li.textContent = text
-    list.append(li)
+        li.textContent = text
+        li.classList.add('list-movies-item')
+        list.append(li)
+    }
 
 }

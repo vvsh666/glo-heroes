@@ -16,7 +16,7 @@
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_getData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/getData */ \"./modules/getData.js\");\n/* harmony import */ var _modules_getMovies__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/getMovies */ \"./modules/getMovies.js\");\n/* harmony import */ var _modules_getProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/getProperty */ \"./modules/getProperty.js\");\n/* harmony import */ var _modules_showSelect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/showSelect */ \"./modules/showSelect.js\");\n\r\n\r\n\r\n\r\n\r\n(0,_modules_getData__WEBPACK_IMPORTED_MODULE_0__.getData)()\r\n;(0,_modules_getMovies__WEBPACK_IMPORTED_MODULE_1__.getMovies)()\r\n;(0,_modules_getProperty__WEBPACK_IMPORTED_MODULE_2__.getProperty)()\r\n;(0,_modules_showSelect__WEBPACK_IMPORTED_MODULE_3__.showSelect)()\r\n\r\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_getData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/getData */ \"./modules/getData.js\");\n/* harmony import */ var _modules_getMovies__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/getMovies */ \"./modules/getMovies.js\");\n/* harmony import */ var _modules_getProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/getProperty */ \"./modules/getProperty.js\");\n/* harmony import */ var _modules_showMovies__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/showMovies */ \"./modules/showMovies.js\");\n/* harmony import */ var _modules_showSelect__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/showSelect */ \"./modules/showSelect.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n(0,_modules_getData__WEBPACK_IMPORTED_MODULE_0__.getData)()\r\n;(0,_modules_getMovies__WEBPACK_IMPORTED_MODULE_1__.getMovies)()\r\n;(0,_modules_getProperty__WEBPACK_IMPORTED_MODULE_2__.getProperty)()\r\n;(0,_modules_showSelect__WEBPACK_IMPORTED_MODULE_4__.showSelect)()\r\n;(0,_modules_showMovies__WEBPACK_IMPORTED_MODULE_3__.showMovies)()\r\n\r\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getMovies\": () => (/* binding */ getMovies)\n/* harmony export */ });\n/* harmony import */ var _getData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getData */ \"./modules/getData.js\");\n/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers */ \"./modules/helpers.js\");\n\r\n\r\n;\r\n\r\n\r\nconst getMovies = () => {\r\n    let moviesList = []\r\n\r\n    return (0,_getData__WEBPACK_IMPORTED_MODULE_0__.getData)().then(data => {\r\n        data.forEach(item => {\r\n            if (item.movies) {\r\n                moviesList = [...moviesList, ...item.movies]\r\n            }\r\n        })\r\n        moviesList = (0,_helpers__WEBPACK_IMPORTED_MODULE_1__.getArrOfUnique)(moviesList)\r\n    })\r\n        .catch(error => console.log(error.message))\r\n\r\n\r\n}\n\n//# sourceURL=webpack:///./modules/getMovies.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getMovies\": () => (/* binding */ getMovies)\n/* harmony export */ });\n/* harmony import */ var _getData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getData */ \"./modules/getData.js\");\n/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers */ \"./modules/helpers.js\");\n/* harmony import */ var _showMovies__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./showMovies */ \"./modules/showMovies.js\");\n\r\n\r\n;\r\n\r\n\r\n\r\nconst getMovies = () => {\r\n    let moviesList = []\r\n\r\n    return (0,_getData__WEBPACK_IMPORTED_MODULE_0__.getData)().then(data => {\r\n        data.forEach(item => {\r\n            if (item.movies) {\r\n                moviesList = [...moviesList, ...item.movies]\r\n            }\r\n        })\r\n        moviesList = (0,_helpers__WEBPACK_IMPORTED_MODULE_1__.getArrOfUnique)(moviesList)\r\n        moviesList.forEach(item => {\r\n            ;(0,_showMovies__WEBPACK_IMPORTED_MODULE_2__.showMovies)(item)\r\n        })\r\n    })\r\n        .catch(error => console.log(error.message))\r\n\r\n\r\n}\n\n//# sourceURL=webpack:///./modules/getMovies.js?");
 
 /***/ }),
 
@@ -57,6 +57,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getArrOfUnique\": () => (/* binding */ getArrOfUnique)\n/* harmony export */ });\n\r\n\r\nconst getArrOfUnique = (arr) => {\r\n    return [...new Set(arr)]\r\n}\n\n//# sourceURL=webpack:///./modules/helpers.js?");
+
+/***/ }),
+
+/***/ "./modules/showMovies.js":
+/*!*******************************!*\
+  !*** ./modules/showMovies.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"showMovies\": () => (/* binding */ showMovies)\n/* harmony export */ });\nconst showMovies = (text) => {\r\n    const list = document.getElementById('list-movies')\r\n\r\n    let li = document.createElement('li')\r\n\r\n    li.textContent = text\r\n    list.append(li)\r\n\r\n}\n\n//# sourceURL=webpack:///./modules/showMovies.js?");
 
 /***/ }),
 

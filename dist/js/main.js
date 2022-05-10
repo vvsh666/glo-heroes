@@ -16,7 +16,7 @@
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_getData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/getData */ \"./modules/getData.js\");\n/* harmony import */ var _modules_getMovies__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/getMovies */ \"./modules/getMovies.js\");\n/* harmony import */ var _modules_getProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/getProperty */ \"./modules/getProperty.js\");\n\r\n\r\n\r\n\r\n(0,_modules_getData__WEBPACK_IMPORTED_MODULE_0__.getData)()\r\n;(0,_modules_getMovies__WEBPACK_IMPORTED_MODULE_1__.getMovies)()\r\n;(0,_modules_getProperty__WEBPACK_IMPORTED_MODULE_2__.getProperty)()\r\n\r\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_getData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/getData */ \"./modules/getData.js\");\n/* harmony import */ var _modules_getMovies__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/getMovies */ \"./modules/getMovies.js\");\n/* harmony import */ var _modules_getProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/getProperty */ \"./modules/getProperty.js\");\n/* harmony import */ var _modules_showSelect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/showSelect */ \"./modules/showSelect.js\");\n\r\n\r\n\r\n\r\n\r\n(0,_modules_getData__WEBPACK_IMPORTED_MODULE_0__.getData)()\r\n;(0,_modules_getMovies__WEBPACK_IMPORTED_MODULE_1__.getMovies)()\r\n;(0,_modules_getProperty__WEBPACK_IMPORTED_MODULE_2__.getProperty)()\r\n;(0,_modules_showSelect__WEBPACK_IMPORTED_MODULE_3__.showSelect)()\r\n\r\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
@@ -46,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getProperty\": () => (/* binding */ getProperty)\n/* harmony export */ });\n/* harmony import */ var _getData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getData */ \"./modules/getData.js\");\n/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers */ \"./modules/helpers.js\");\n\r\n\r\n;\r\n\r\n\r\nconst getProperty = (key) => {\r\n    let propertyList = []\r\n\r\n    ;(0,_getData__WEBPACK_IMPORTED_MODULE_0__.getData)().then(data => {\r\n        data.forEach(item => {\r\n            if (item[key]) {\r\n                propertyList.push(item[key])\r\n            }\r\n        })\r\n        return (0,_helpers__WEBPACK_IMPORTED_MODULE_1__.getArrOfUnique)(propertyList)\r\n    })\r\n}\n\n//# sourceURL=webpack:///./modules/getProperty.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getProperty\": () => (/* binding */ getProperty)\n/* harmony export */ });\n/* harmony import */ var _getData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getData */ \"./modules/getData.js\");\n/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers */ \"./modules/helpers.js\");\n\r\n\r\n;\r\n\r\n\r\nconst getProperty = (key) => {\r\n    const select = document.getElementById(key)\r\n    \r\n    let propertyList = []\r\n\r\n    ;(0,_getData__WEBPACK_IMPORTED_MODULE_0__.getData)().then(data => {\r\n        data.forEach(item => {\r\n            if (item[key]) {\r\n                propertyList.push(item[key])\r\n            }\r\n        })\r\n        propertyList = (0,_helpers__WEBPACK_IMPORTED_MODULE_1__.getArrOfUnique)(propertyList)\r\n                \r\n        propertyList.forEach(item => {\r\n            const option = document.createElement('option')\r\n            option.value = item\r\n            option.textContent = item\r\n            select.append(option)\r\n        })\r\n        \r\n    })\r\n}\n\n//# sourceURL=webpack:///./modules/getProperty.js?");
 
 /***/ }),
 
@@ -57,6 +57,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getArrOfUnique\": () => (/* binding */ getArrOfUnique)\n/* harmony export */ });\n\r\n\r\nconst getArrOfUnique = (arr) => {\r\n    return [...new Set(arr)]\r\n}\n\n//# sourceURL=webpack:///./modules/helpers.js?");
+
+/***/ }),
+
+/***/ "./modules/showSelect.js":
+/*!*******************************!*\
+  !*** ./modules/showSelect.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"showSelect\": () => (/* binding */ showSelect)\n/* harmony export */ });\n/* harmony import */ var _getProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getProperty */ \"./modules/getProperty.js\");\n\r\n\r\nconst showSelect = () => {\r\n    const propertyArr = [\"species\", \"gender\", \"status\", \"citizenship\"]\r\n\r\n    propertyArr.forEach(property => {\r\n        ;(0,_getProperty__WEBPACK_IMPORTED_MODULE_0__.getProperty)(property)\r\n    })\r\n}\n\n//# sourceURL=webpack:///./modules/showSelect.js?");
 
 /***/ })
 

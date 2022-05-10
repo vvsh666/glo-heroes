@@ -4,6 +4,8 @@ import { getData } from "./getData"
 import { getArrOfUnique } from "./helpers"
 
 export const getProperty = (key) => {
+    const select = document.getElementById(key)
+    
     let propertyList = []
 
     getData().then(data => {
@@ -12,6 +14,14 @@ export const getProperty = (key) => {
                 propertyList.push(item[key])
             }
         })
-        return getArrOfUnique(propertyList)
+        propertyList = getArrOfUnique(propertyList)
+                
+        propertyList.forEach(item => {
+            const option = document.createElement('option')
+            option.value = item
+            option.textContent = item
+            select.append(option)
+        })
+        
     })
 }

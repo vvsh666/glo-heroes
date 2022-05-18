@@ -5,7 +5,8 @@ import { showMovies } from './modules/showMovies'
 import { showSelect } from './modules/showSelect'
 import { slider } from './modules/slider'
 import { getHeroes } from './modules/getHeroes'
-import { showHero } from './modules/showHero'
+import { changeMovies } from './modules/changeMovies'
+import { changeSelect } from './modules/changeSelect'
 
 getData()
 getMovies()
@@ -14,5 +15,6 @@ showSelect()
 showMovies()
 slider()
 getHeroes()
-// showHero()
+changeMovies()
+changeSelect()
 

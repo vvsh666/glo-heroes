@@ -1,9 +1,12 @@
 import { getData } from "./getData"
 import { showHero } from "./showHero"
-import { slider } from './slider'
+import { slider } from "./slider"
 
 export const filter = (objFilters) => {
-    const heroBlock = document.querySelector('.hero-block')
+    const sliderBlock = document.querySelector('.hero-wrapper')
+    const heroBlock = sliderBlock.querySelector('.hero-block')
+    const arrows = sliderBlock.querySelectorAll('.arrow')
+    const pagination = sliderBlock.querySelector('.pagination')
 
     getData().then(data => {
         if (objFilters.species) {
@@ -32,27 +35,23 @@ export const filter = (objFilters) => {
 
         heroBlock.innerHTML = ''
 
-        console.log(data);
+        if (data.length === 0) {
+            pagination.style.display = 'none'
+            arrows.forEach(arrow => {
+                arrow.style.display = 'none'
+            })
+            heroBlock.innerHTML = `
+            <div style = "position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-size: 1.5rem; width: 100%">
+            Нет данных по вашему запросу, измените значения фильтров</div>
+            `
 
-        if (data) {
+        } else {
             data.forEach(item => {
                 if (item) {
                     showHero(item)
                 }
             })
-
             slider()
-        } else {
-            // const div = document.createElement('div')
-            // div.style.width = '100%'
-            // div.style.height = '100%'
-            // div.style.display = 'flex'
-            // div.innerHTML = `
-            //     <p>Информация отсутствует. Измените параметры фильтров</p>
-            // `
-            // heroBlock.append(div)
-            heroBlock.textContent = 'Нет данных'
-            console.log('Нет данных');
         }
     })
 }

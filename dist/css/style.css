@@ -102,9 +102,10 @@ header {
 .movies-list {
     width: 30%;
     padding: 10px;
-    height: 600px;
+    height: 650px;
     overflow: overlay;
-
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 .movies-list>ul {
@@ -127,25 +128,31 @@ header {
 }
 
 .hero-wrapper {
+    position: relative;
     width: 70%;
+    height: 650px;
 }
 
 .title-hero {
     display: block;
     width: 100%;
-    align-items: center;
+    text-align: center;
 }
 
 .hero-block {
+    position: relative;
+    width: 840px;
+    height: 550px;
     padding: 10px;
     padding-bottom: 30px;
+    overflow: hidden;
 }
 
 .hero-slide {
     display: flex;
     align-items: start;
     justify-content: space-between;
-
+    padding: 0 20px;
 }
 
 .hero-img {
@@ -173,10 +180,10 @@ header {
 }
 
 .hero-info-item-title {
-    padding: 5px;
     border: 1px solid;
     border-radius: 5px;
     text-align: center;
+    background-color: #b3b3b3;
 }
 
 .hero-info-item-text {
@@ -185,7 +192,38 @@ header {
     text-align: center;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    top: 90%;
+.button-prev {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/arrow-prev.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.button-next {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/arrow-next.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.pagination {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
 }

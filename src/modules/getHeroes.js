@@ -1,5 +1,6 @@
 import { getData } from "./getData"
 import { showHero } from "./showHero"
+import { slider } from "./slider"
 
 export const getHeroes = () => {
     getData().then(data => {
@@ -7,8 +8,8 @@ export const getHeroes = () => {
             if (item) {
                 showHero(item)
             }
-
         })
+        slider()
     })
 
 }

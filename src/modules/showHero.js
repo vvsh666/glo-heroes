@@ -1,12 +1,12 @@
 export const showHero = (hero) => {
     const heroBlock = document.querySelector('.hero-block')
-    
+
     const heroSlide = document.createElement('div')
-    heroSlide.className = 'hero-slide swiper-slide'
-    
+    heroSlide.className = 'hero-slide'
+
     const heroImage = document.createElement('div')
     heroImage.className = 'hero-image'
-    
+
     const heroInfo = document.createElement('div')
     heroInfo.className = 'hero-info'
 
@@ -16,7 +16,7 @@ export const showHero = (hero) => {
         } else if (hero[key]) {
             const heroInfoItem = document.createElement('div')
             heroInfoItem.className = 'hero-info-item'
-            
+
             const heroInfoItemTitle = document.createElement('div')
             heroInfoItemTitle.className = 'hero-info-item-title'
             heroInfoItemTitle.textContent = key

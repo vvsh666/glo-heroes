@@ -204,6 +204,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
+    opacity: 0.6;
 }
 
 .button-next {
@@ -218,6 +219,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
+    opacity: 0.6;
 }
 
 .pagination {

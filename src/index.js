@@ -7,6 +7,7 @@ import { getHeroes } from './modules/getHeroes'
 import { changeMovies } from './modules/changeMovies'
 import { changeSelect } from './modules/changeSelect'
 import { slider } from './modules/slider'
+import { search } from './modules/search'
 
 getData()
 getMovies()
@@ -17,4 +18,5 @@ getHeroes()
 changeMovies()
 changeSelect()
 slider()
+search()
 

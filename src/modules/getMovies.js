@@ -4,7 +4,9 @@ import { getData } from "./getData"
 import { getArrOfUnique } from "./helpers"
 import { showMovies } from "./showMovies"
 
-export const getMovies = () => {
+export const getMovies = (str = '') => {
+    const list = document.getElementById('list-movies')
+    list.innerHTML = ''
     let moviesList = []
 
     getData().then(data => {
@@ -14,9 +16,21 @@ export const getMovies = () => {
             }
         })
         moviesList = getArrOfUnique(moviesList)
-        moviesList.forEach(item => {
-            showMovies(item)
-        })
+        if (str === '') {
+            moviesList.forEach(item => {
+                showMovies(item)
+            })
+        } else {
+            moviesList = moviesList.filter(item => {
+                if (item.toLowerCase().includes(str.toLowerCase())) {
+                    return item
+                }
+            })
+            moviesList.forEach(item => {
+                showMovies(item)
+            })
+        }
+
     })
         .catch(error => console.log(error.message))
 

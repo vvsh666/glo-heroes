@@ -6,7 +6,8 @@ import { showMovies } from "./showMovies"
 
 export const getMovies = (str = '') => {
     const list = document.getElementById('list-movies')
-    list.innerHTML = ''
+    list.innerHTML = `<li class="list-movies-item list-movies-item-active">All films</li>`
+
     let moviesList = []
 
     getData().then(data => {
